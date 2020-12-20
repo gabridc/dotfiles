@@ -40,8 +40,24 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+#@gabridc customize
+
+#squirrel-soft
 
 function repoini {
     mkdir Repositorio; 
     mkdir Repositorio/KDE;
 }
+
+#squirrel-sec customize
+
+export PATH=/usr/sbin:$PATH
+
+function mkt () {
+        mkdir {enumeration,intrusion,scalation,flags}
+        cd enumeration && mkdir {nmap,web,ftp,ssh}
+        cd ../flags && touch user.txt && touch root.txt
+        dirhtb
+}
+
+function dirhtb () {cd ~/HTB/squirrel-sec}
